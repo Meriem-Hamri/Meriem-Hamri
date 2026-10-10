@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="285" viewBox="0 0 1200 285"><defs>
+ <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#141D32"/><stop offset=".48" stop-color="#272F50"/><stop offset="1" stop-color="#43282D"/></linearGradient>
+ <linearGradient id="foil" x1="0" y1=".2" x2="1" y2=".8"><stop stop-color="#272F50"/><stop offset=".16" stop-color="#B8DDE8"/><stop offset=".29" stop-color="#FAF3E8"/><stop offset=".4" stop-color="#EABAC9"/><stop offset=".54" stop-color="#B52B53"/><stop offset=".7" stop-color="#F3D88F"/><stop offset=".81" stop-color="#D5A22F"/><stop offset="1" stop-color="#43282D"/></linearGradient>
+ <linearGradient id="gloss" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#FAF3E8" stop-opacity=".9"/><stop offset=".18" stop-color="#B8DDE8" stop-opacity=".72"/><stop offset=".37" stop-color="#EABAC9" stop-opacity=".85"/><stop offset=".51" stop-color="#FAF3E8" stop-opacity=".98"/><stop offset=".68" stop-color="#F3D88F" stop-opacity=".85"/><stop offset=".9" stop-color="#B52B53" stop-opacity=".8"/><stop offset="1" stop-color="#272F50" stop-opacity=".7"/></linearGradient>
+ <linearGradient id="line" x1="0" x2="1"><stop stop-color="#B52B53"/><stop offset=".23" stop-color="#EABAC9"/><stop offset=".44" stop-color="#B8DDE8"/><stop offset=".65" stop-color="#FAF3E8"/><stop offset=".82" stop-color="#F3D88F"/><stop offset="1" stop-color="#D5A22F"/></linearGradient>
+ <radialGradient id="shine"><stop stop-color="#FAF3E8" stop-opacity=".94"/><stop offset=".25" stop-color="#B8DDE8" stop-opacity=".58"/><stop offset="1" stop-color="#EABAC9" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+ <clipPath id="rounded"><rect width="1200" height="350" rx="22"/></clipPath>
+ </defs><rect width="1200" height="285" rx="20" fill="url(#dark)"/><rect x="2" y="2" width="1196" height="281" rx="18" stroke="url(#line)" stroke-width="3" fill="none"/>
+<path d="M600 26 V256 M28 141 H1172" stroke="#B8DDE8" opacity=".3"/><g font-family="Arial" font-size="16">
+<text x="48" y="65" fill="#EABAC9" letter-spacing="3">FRONTEND</text><text x="48" y="104" fill="#FAF3E8" font-size="26">Next.js  /  Angular  /  React</text>
+<text x="635" y="65" fill="#F3D88F" letter-spacing="3">BACKEND</text><text x="635" y="104" fill="#FAF3E8" font-size="26">NestJS  /  Spring Boot  /  FastAPI</text>
+<text x="48" y="184" fill="#B8DDE8" letter-spacing="3">LANGUAGES</text><text x="48" y="222" fill="#FAF3E8" font-size="26">TypeScript  /  Java  /  Python  /  C++</text>
+<text x="635" y="184" fill="#F3D88F" letter-spacing="3">DATABASES &amp; TOOLS</text><text x="635" y="222" fill="#FAF3E8" font-size="25">PostgreSQL  /  Oracle  /  Git</text></g></svg>
