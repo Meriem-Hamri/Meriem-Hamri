@@ -1,69 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Meriem Hamri - Build with intention">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Meriem Hamri - Build with intention">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#151a38"/>
-      <stop offset="0.6" stop-color="#1d2250"/>
-      <stop offset="1" stop-color="#3a1f3d"/>
-    </linearGradient>
-    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#6a6fc9" stop-opacity="0"/>
-      <stop offset="0.4" stop-color="#b8325a"/>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a3f9e"/>
+      <stop offset="0.5" stop-color="#b8325a"/>
       <stop offset="1" stop-color="#e8b84b"/>
     </linearGradient>
-    <linearGradient id="ribbon2" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#9fd6e6" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#f4c6d8" stop-opacity="0.8"/>
-      <stop offset="1" stop-color="#f7e3a1"/>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8b84b"/>
+      <stop offset="0.5" stop-color="#b8325a"/>
+      <stop offset="1" stop-color="#3a3f9e"/>
     </linearGradient>
+
+    <!-- fade edges so the banner melts into the page -->
+    <linearGradient id="vfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.82" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="mV"><rect width="1200" height="320" fill="url(#vfade)"/></mask>
+    <mask id="mH"><rect width="1200" height="320" fill="url(#hfade)"/></mask>
+
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="shadow" x="-10%" y="-30%" width="120%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+
     <clipPath id="type">
-      <rect x="60" y="100" height="80" width="0">
-        <animate attributeName="width" from="0" to="640" dur="2.4s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+      <rect x="600" y="100" width="0" height="100">
+        <animate attributeName="x" from="600" to="140" dur="2.2s" begin="0.4s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
+        <animate attributeName="width" from="0" to="920" dur="2.2s" begin="0.4s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
       </rect>
     </clipPath>
-    <clipPath id="round"><rect width="1200" height="300" rx="18"/></clipPath>
   </defs>
 
-  <g clip-path="url(#round)">
-    <rect width="1200" height="300" fill="url(#bg)"/>
+  <!-- fading, animated background -->
+  <g mask="url(#mH)">
+    <g mask="url(#mV)">
+      <rect width="1200" height="320" fill="url(#g1)" opacity="0.35">
+        <animate attributeName="opacity" values="0.3;0.45;0.3" dur="7s" repeatCount="indefinite"/>
+      </rect>
 
-    <!-- twinkling stars -->
-    <g fill="#ffffff">
-      <circle cx="120" cy="40" r="1.6"><animate attributeName="opacity" values="0.1;1;0.1" dur="3s" repeatCount="indefinite"/></circle>
-      <circle cx="340" cy="250" r="1.4"><animate attributeName="opacity" values="1;0.1;1" dur="4s" repeatCount="indefinite"/></circle>
-      <circle cx="560" cy="45" r="1.8"><animate attributeName="opacity" values="0.1;1;0.1" dur="2.6s" repeatCount="indefinite"/></circle>
-      <circle cx="760" cy="265" r="1.3"><animate attributeName="opacity" values="1;0.1;1" dur="3.4s" repeatCount="indefinite"/></circle>
-      <circle cx="880" cy="60" r="1.5"><animate attributeName="opacity" values="0.1;1;0.1" dur="3.8s" repeatCount="indefinite"/></circle>
-      <circle cx="1040" cy="230" r="1.7"><animate attributeName="opacity" values="1;0.1;1" dur="2.9s" repeatCount="indefinite"/></circle>
-    </g>
+      <!-- soft floating glows -->
+      <circle cx="260" cy="150" r="110" fill="#6a6fc9" opacity="0.45" filter="url(#blur)">
+        <animate attributeName="cx" values="260;380;260" dur="12s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="150;120;150" dur="9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="960" cy="160" r="120" fill="#e8b84b" opacity="0.4" filter="url(#blur)">
+        <animate attributeName="cx" values="960;820;960" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="160;190;160" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="600" cy="200" r="100" fill="#b8325a" opacity="0.4" filter="url(#blur)">
+        <animate attributeName="cx" values="600;700;500;600" dur="14s" repeatCount="indefinite"/>
+      </circle>
 
-    <!-- floating ribbons -->
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0,0; -30,12; 0,0" dur="9s" repeatCount="indefinite"/>
-      <path d="M1250,-20 C1050,60 980,200 780,260 C700,285 640,300 560,330 L1250,330 Z" fill="url(#ribbon)" opacity="0.85"/>
-      <path d="M1250,-40 C1100,40 1000,150 850,215 C760,255 700,290 620,330" fill="none" stroke="url(#ribbon2)" stroke-width="5" stroke-linecap="round"/>
-      <path d="M1250,10 C1120,70 1040,170 900,225 C830,252 780,280 720,320" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 10">
-        <animate attributeName="stroke-dashoffset" from="0" to="-160" dur="6s" repeatCount="indefinite"/>
+      <!-- waves -->
+      <path fill="url(#g1)" opacity="0.55"
+            d="M0,190 C150,150 300,230 450,195 S750,140 900,185 S1100,215 1200,185 L1200,320 L0,320 Z">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"
+          values="M0,190 C150,150 300,230 450,195 S750,140 900,185 S1100,215 1200,185 L1200,320 L0,320 Z;
+                  M0,175 C150,215 300,150 450,185 S750,225 900,180 S1100,150 1200,185 L1200,320 L0,320 Z;
+                  M0,190 C150,150 300,230 450,195 S750,140 900,185 S1100,215 1200,185 L1200,320 L0,320 Z"/>
+      </path>
+      <path fill="url(#g2)" opacity="0.4"
+            d="M0,215 C200,185 350,245 600,210 S950,175 1200,215 L1200,320 L0,320 Z">
+        <animate attributeName="d" dur="11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"
+          values="M0,215 C200,185 350,245 600,210 S950,175 1200,215 L1200,320 L0,320 Z;
+                  M0,205 C200,245 350,190 600,220 S950,250 1200,205 L1200,320 L0,320 Z;
+                  M0,215 C200,185 350,245 600,210 S950,175 1200,215 L1200,320 L0,320 Z"/>
+      </path>
+      <!-- light crest line -->
+      <path fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"
+            d="M0,190 C150,150 300,230 450,195 S750,140 900,185 S1100,215 1200,185">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"
+          values="M0,190 C150,150 300,230 450,195 S750,140 900,185 S1100,215 1200,185;
+                  M0,175 C150,215 300,150 450,185 S750,225 900,180 S1100,150 1200,185;
+                  M0,190 C150,150 300,230 450,195 S750,140 900,185 S1100,215 1200,185"/>
       </path>
     </g>
-
-    <!-- frame -->
-    <rect x="22" y="22" width="1156" height="256" rx="10" fill="none" stroke="#ffffff" stroke-opacity="0.15"/>
-
-    <text x="60" y="68" font-family="'Courier New', monospace" font-size="15" letter-spacing="5" fill="#9aa3e6">MH / SOFTWARE ENGINEERING</text>
-
-    <g clip-path="url(#type)">
-      <text x="60" y="165" font-family="Georgia, 'Times New Roman', serif" font-size="68" fill="#ffffff">Build with intention.</text>
-    </g>
-
-    <text x="60" y="215" font-family="'Courier New', monospace" font-size="15" letter-spacing="4" fill="#e8b84b" opacity="0">
-      ARCHITECTURE / CRAFT / EXPERIENCE
-      <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur="0.8s" fill="freeze"/>
-    </text>
-
-    <!-- blinking cursor dot -->
-    <circle cx="64" cy="252" r="3.5" fill="#e8b84b">
-      <animate attributeName="opacity" values="1;0.15;1" dur="1.4s" repeatCount="indefinite"/>
-    </circle>
-    <text x="1140" y="258" text-anchor="end" font-family="'Courier New', monospace" font-size="13" letter-spacing="2" fill="#f7e3a1">2026</text>
   </g>
+
+  <!-- twinkling stars -->
+  <g fill="#ffffff">
+    <circle cx="180" cy="70" r="1.6"><animate attributeName="opacity" values="0.1;1;0.1" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="420" cy="55" r="1.3"><animate attributeName="opacity" values="1;0.1;1" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="62" r="1.8"><animate attributeName="opacity" values="0.1;1;0.1" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="1010" cy="80" r="1.4"><animate attributeName="opacity" values="1;0.1;1" dur="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="90" cy="150" r="1.2"><animate attributeName="opacity" values="0.1;1;0.1" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1110" cy="140" r="1.5"><animate attributeName="opacity" values="1;0.1;1" dur="2.9s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- text -->
+  <text x="600" y="92" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" letter-spacing="6" fill="#c9cdf5" opacity="0">
+    MH / SOFTWARE ENGINEERING
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="1s" fill="freeze"/>
+  </text>
+
+  <g clip-path="url(#type)" filter="url(#shadow)">
+    <text x="600" y="172" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" fill="#ffffff">Build with intention.</text>
+  </g>
+
+  <text x="600" y="214" text-anchor="middle" font-family="'Courier New', monospace" font-size="15" letter-spacing="5" fill="#f7e3a1" opacity="0">
+    ARCHITECTURE / CRAFT / EXPERIENCE
+    <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur="1s" fill="freeze"/>
+  </text>
 </svg>
